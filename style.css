@@ -1,0 +1,51 @@
+:root {
+    --bg-color: #EBF8FD;
+    --border-color: #9BCDFE;
+    --gradient: linear-gradient(200deg, #EBF8FD, #9BCDFE);
+}
+
+html {
+    background-image: var(--gradient);
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+nav {
+    background-color: black;
+    color: aliceblue;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: solid 6px var(--border-color);
+}
+nav img {
+    vertical-align: middle;
+    max-width: 340px;
+    margin: 0px 0px 0px 0px;
+}
+
+.links {
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+}
+.links h1 {
+    font-weight: normal;
+    margin: 0px 50px 0px 0px;
+}
+
+main {
+    background: #ffffff9a;
+    margin: 0px 5%;
+    padding: 25px 45px;
+}
+main h2 {
+    font-weight: bold;
+    margin: 0px
+}
