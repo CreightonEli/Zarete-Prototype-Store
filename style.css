@@ -4,28 +4,34 @@
     --gradient: linear-gradient(200deg, #EBF8FD, #9BCDFE);
 }
 
-html {
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
     background-image: var(--gradient);
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Inter', sans-serif;
     font-family: 'Raleway', sans-serif;
-}
-
-body {
-    margin: 0px;
 }
 
 nav {
     background-color: black;
     color: aliceblue;
     margin: 0px;
-    padding: 0px;
+    padding: 0px 5% 0px 5%;
     border-bottom: solid 6px var(--border-color);
 }
 nav img {
     vertical-align: middle;
     max-width: 340px;
-    margin: 0px 0px 0px 0px;
+    max-height: 100px;
+    margin: 0px 0px 0px 25px;
+}
+@media(max-width: 335px) {
+    nav img {
+        margin: 0px 0px 0px 0px;
+    }
 }
 
 .links {
@@ -35,17 +41,83 @@ nav img {
     flex-wrap: wrap;
     padding: 40px 0px;
 }
+@media(max-width: 984px) {
+    .links {
+        display: none;
+    }
+}
 .links h1 {
     font-weight: normal;
+    font-size: 22px;
     margin: 0px 50px 0px 0px;
 }
 
+.hamburger {
+    font-size: 48px;
+    float: right;
+    margin: 30px 0;
+}
+@media(min-width: 985px) {
+    .hamburger {
+        display: none;
+    }
+}
+
 main {
+    height: 100%;
     background: #ffffff9a;
     margin: 0px 5%;
+}
+
+.banner {
+    background-image: url("images/Osmium_crystalsHD.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 20%;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
     padding: 25px 45px;
 }
-main h2 {
+section h2 {
+    position: relative;
     font-weight: bold;
+    color: black;
+    background-color: #ffffff00;
     margin: 0px
+}
+section img{
+    border-radius: 1em;
+    max-width: 30%;
+    transform: translateY(-90px);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.452);
+    margin: 0 30px;
+}
+@media(max-width: 864px) {
+    section {
+        flex-direction: column;
+    }
+    section img {
+        margin: 10px auto;
+        max-width: 100%;
+    }
+}
+
+post {
+    background-color: #EBF8FD;
+    border-radius: 1em;
+    transform: translateY(-90px);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.452);
+    padding: 30px;
+}
+
+hr {
+    background-color: var(--border-color);
+    border: none;
+    height: 3px;
 }
