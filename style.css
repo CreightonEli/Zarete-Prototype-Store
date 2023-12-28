@@ -8,19 +8,25 @@ body, html {
     height: 100%;
     margin: 0;
     background-color: black;
+    background-color: black;
     background-image: var(--gradient);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Inter', sans-serif;
     font-family: 'Raleway', sans-serif;
+    overflow-y: hidden;
 }
 
-nav {
+header {
     background-color: black;
     color: aliceblue;
     margin: 0px;
-    padding: 0px 5% 0px 5%;
     border-bottom: solid 6px var(--border-color);
+}
+
+nav {
+    margin: 0px auto;
+    max-width: 1152px;
 }
 nav img {
     vertical-align: middle;
@@ -55,7 +61,7 @@ nav img {
 .hamburger {
     font-size: 48px;
     float: right;
-    margin: 30px 0;
+    margin: 30px 30px 0 0;
 }
 @media(min-width: 985px) {
     .hamburger {
@@ -64,9 +70,11 @@ nav img {
 }
 
 main {
+    box-sizing: border-box;
     height: 100%;
     background: #ffffff9a;
-    margin: 0px 5%;
+    margin: 0px auto;
+    max-width: 1152px;
 }
 
 .banner {
@@ -75,14 +83,15 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    height: 20%;
+    height: 100%;
+    max-height: 150px;
 }
 
 section {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    padding: 25px 45px;
+    padding: 0 30px;
 }
 section h2 {
     position: relative;
@@ -92,32 +101,50 @@ section h2 {
     margin: 0px
 }
 section img{
-    border-radius: 1em;
-    max-width: 30%;
+    border-radius: 0 1em 0 1em;
     transform: translateY(-90px);
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.452);
-    margin: 0 30px;
+    max-width: 300px;
+    margin: 0 15px 0 0;
 }
+
+post {
+    max-width: 500px;
+    background-color: #EBF8FD;
+    border-radius: 1em 0;
+    transform: translateY(-90px);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.452);
+    padding: 30px;
+}
+
+/* Responsive */
 @media(max-width: 864px) {
     section {
         flex-direction: column;
     }
     section img {
-        margin: 10px auto;
-        max-width: 100%;
+        margin: 10px auto -100px;
+        border-radius: 1em;
     }
-}
-
-post {
-    background-color: #EBF8FD;
-    border-radius: 1em;
-    transform: translateY(-90px);
-    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.452);
-    padding: 30px;
+    post {
+        margin: 0px auto;
+        border-radius: 1em;
+    }
 }
 
 hr {
     background-color: var(--border-color);
     border: none;
     height: 3px;
+}
+
+footer {
+    background-color: black;
+    color: aliceblue;
+    margin: 0;
+    border-top: solid 6px var(--border-color);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
