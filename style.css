@@ -14,7 +14,7 @@ body, html {
     background-size: cover;
     font-family: 'Inter', sans-serif;
     font-family: 'Raleway', sans-serif;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 header {
